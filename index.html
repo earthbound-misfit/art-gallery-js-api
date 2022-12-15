@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="main.css">
+<script src="main.js"></script>
+<title>Art Gallery</title>
+</head>
+<body>
+
+
+    <!-- NAVBAR -->
+    <div class="container">
+      <nav class="nav navbar-dark p-4 navbar-expand-lg fixed-top position-absolute shadow w-100" style="background-color: rgba(235, 172, 2, 0.8);">
+        <a href="/index.html" class="navbar-brand">ARTWORKS</a>
+        <button class="navbar-toggler" type="button"></button>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a href="/about.html" class="nav-link">About</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- GALLERY -->
+      
+      <div class="container">
+        <div class="row text-center">
+          <div class="mt-5"></div>
+          <div class="mt-5"></div>
+          <div class="mt-5"></div>
+      <h1>GALLERY</h1>
+      <!-- IMAGE 1 -->
+          <div class="col-lg-4 col-sm-12 mt-5">
+            <figure id="fig1" onclick="event.stopPropagation(); getArtwork(this.id, event)">
+              <div class="container">
+            
+                <img src="/images/treeoflifewindow.jpg"
+                  class="w-100 shadow-1-strong rounded mb-4"
+                  alt="Darwin D. Martin House: 'Tree of Life' Window" info="38836" />
+                  <p id="p1"></p>
+            </figure>
+          </div>
+
+      <!-- IMAGE 2 -->
+          <div class="col-lg-8 col-sm-12 mt-5">
+            <figure id="fig2"
+              onclick="event.stopPropagation(); getArtwork(this.id, event);">
+              <img src="/images/inventionsofthemonsters.jpg"
+                class="w-100 shadow-1-strong rounded mb-4" alt="Inventions of the Monsters"
+                info="151424"/>
+              <div class="container">
+                <p id="p2" class="p-2"></p>
+              </div>
+            </figure>
+          </div>
+
+      <!-- IMAGE 3 -->
+          <div class="col-lg-8 col-sm-12 mt-5">
+            <figure id="fig3" onclick="event.stopPropagation(); getArtwork(this.id, event)">
+              <img src="/images/abstraction.jpg" class="w-100 shadow-1-strong rounded mb-4"
+                alt="Abstraction" info="109447" />
+              <div class="container">
+                <p id="p3" class="p-2"></p>
+              </div>
+            </figure>
+          </div>
+      
+      <!-- IMAGE 4 -->
+          <div class="col-lg-4 col-sm-12">
+            <figure id="fig4" onclick="event.stopPropagation(); getArtwork(this.id, event)">
+              <img src="/images/towardstheunknown.jpg"
+                class="w-100 shadow-1-strong rounded mb-4" alt="Towards the Unknown"
+                info="60259" />
+              <div class="container">
+                <p id="p4" class="p-2"></p>
+              </div>
+            </figure>
+          </div>
+
+      <!-- IMAGE 5 -->
+          <div class="col-lg-8 col-sm-12">
+            <figure id="fig5" onclick="event.stopPropagation(); getArtwork(this.id, event)">
+              <img src="/images/thelostcity.jpg" class="w-100 shadow-1-strong rounded mb-4"
+                alt="The Lost City" info="60257" />
+              <div class="container">
+                <p id="p5" class="p-2"></p>
+              </div>
+            </figure>
+          </div>
+
+      <!-- IMAGE 6 -->
+          <div class="col-lg-4 col-sm-12">
+            <figure id="fig6" onclick="event.stopPropagation(); getArtwork(this.id, event)">
+              <img src="/images/thegarden.jpg" class="w-100 shadow-1-strong rounded mb-4"
+                alt="The Garden" info="40997" />
+              <div class="container">
+                <p id="p6" class="p-2"></p>
+              </div>
+            </figure>
+          </div>
+          <div class="col-lg-4 col-sm-12">
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+</body>
+<!-- Gallery -->
+<!-- <div class="row">
+  <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+    <figure id="fig1" onclick="event.stopPropagation(); getArtwork(this.id, event)" value = "Display">
+      <div class="container 0">
+       
+      <img src="/images/treeoflifewindow.jpg"
+        class="w-100 shadow-1-strong rounded mb-4"
+        alt="Darwin D. Martin House: 'Tree of Life' Window" info="38836"/>
+        <div class="position-sticky m-1 start-0 bottom-50 shadow" style="border-radius: 5px;">
+          <p id="p1"></p></div>
+    </figure>
+    <figure id="fig2" onclick="event.stopPropagation(); getArtwork(this.id, event);">
+      <img src="/images/inventionsofthemonsters.jpg"
+        class="w-100 shadow-1-strong rounded mb-4" alt="Inventions of the Monsters" info="151424" data-toggle="modal" data-target="#exampleModal"/>
+        <div class="container">
+          <p id="p2" class="p-2" onclick=""></p>
+        </div>
+    </figure>
+  </div>
+
+  <div class="col-lg-4 mb-4 mb-lg-0">
+    <figure id="fig3" onclick="event.stopPropagation(); getArtwork(this.id, event)">
+      <img src="/images/abstraction.jpg"
+        class="w-100 shadow-1-strong rounded mb-4"
+        alt="Abstraction" info="109447"/>
+        <div class="container">
+          <p id="p3" class="p-2"></p>
+        </div>
+    </figure>
+    <figure id="fig4" onclick="event.stopPropagation(); getArtwork(this.id, event)">
+      <img
+        src="/images/towardstheunknown.jpg"
+        class="w-100 shadow-1-strong rounded mb-4" alt="Towards the Unknown" info="60259"/>
+        <div class="container">
+          <p id="p4" class="p-2"></p>
+        </div>
+    </figure>
+  </div>
+
+  <div class="col-lg-4 mb-4 mb-lg-0">
+    <figure id="fig5" onclick="event.stopPropagation(); getArtwork(this.id, event)">
+      <img src="/images/thelostcity.jpg" class="w-100 shadow-1-strong rounded mb-4"
+        alt="The Lost City" info="60257"/>
+        <div class="container">
+          <p id="p5" class="p-2"></p>
+        </div>
+    </figure>
+    <figure id="fig6" onclick="event.stopPropagation(); getArtwork(this.id, event)">
+      <img src="/images/thegarden.jpg" class="w-100 shadow-1-strong rounded mb-4"
+        alt="The Garden" info="40997"/>
+        <div class="container">
+          <p id="p6" class="p-2"></p>
+        </div>
+    </figure>
+  </div>
+</div> -->
+<!-- Gallery -->
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>
