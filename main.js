@@ -29,34 +29,6 @@ async function clickedEvent(img_index, p_index) {
   let artist = info.data.artist_display;
   document.getElementById([p_index]).innerText = `${title}\n${artist}`
 }
-//   function toggleInfo(p_index) {
-//     // get the info
-//     var artInfo = document.getElementById([p_index]).innerText; 
-
-//     // get the current value of the clock's display property
-//     var displaySetting = artInfo.style.display;
-
-//     // also get the clock button, so we can change what it says
-
-
-//     // now toggle the clock and the button text, depending on current state
-//     if (displaySetting == 'block') {
-//       // clock is visible. hide it
-//       artInfo.style.display = 'none';
-//       // change button text
-     
-//     }
-//     else {
-//       // clock is hidden. show it
-//       artInfo.style.display = 'block';
-//       // change button text
-//       showButton.innerHTML = 'Hide clock';
-//     }
-//   }
-//   toggleInfo()
-// }
-
-
 
 function getArtwork(id, event) {
   switch(id) {
